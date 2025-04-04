@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .counter {
+            font-size: 50px;
+            margin: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Counter</h1>
+<p class="counter">Current Count: {{ counter }}</p>
+
+<p>{{ message }}</p>
+
+<!-- Action buttons -->
+{% if counter < 100 %}
+    <button onclick="window.location.href='/count_up'">Count Up</button>
+    <button onclick="window.location.href='/count_down'">Count Down</button>
+{% endif %}
+
+<button onclick="window.location.href='/reset'">Reset</button>
+
+</body>
+</html>
